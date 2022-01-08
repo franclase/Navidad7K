@@ -52,8 +52,8 @@ class UsuarioController
         $longitudUsuario = strlen($user) > 6;
         $longitudPass = strlen($pass) > 8;
         $contieneArroba = strpos($email, '@') !== false;
-        
-        if ($longitudUsuario && $longitudPass && $contieneArroba){
+
+        if ($longitudUsuario && $longitudPass && $contieneArroba){ 
             $this->usuarioModelo->registrar_usuario($user, $pass, $email);
             header("location:/Navidad7K/");            
         } else {

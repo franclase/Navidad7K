@@ -55,12 +55,10 @@ if(isset($_POST['enviarRegistro'])){
     $errores = $usuarioController->crear_usuario_registro($user, $password, $email);
 }
 
-    $errores = [];
-    if ($errores && count($errores) >0) {   
-        echo $errores; 
-        
+    if (isset($errores) && count($errores) >0) {  
+              
         foreach($errores as $error){
-            echo $error;
+            echo $error."<br>";
         }
 }
 ?>
